@@ -381,7 +381,7 @@ QueueLoop:
 
 			fi := FieldInfo{
 				Field:   f,
-				Name:    name,
+				Name:    strings.ToLower(name),
 				Zero:    reflect.New(f.Type).Elem(),
 				Options: parseOptions(tag),
 			}
